@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List</title>
+
+    <!-- internal css -->
+    <style></style>
+  </head>
+
+  <body>
+    <div>
+      <!-- List -->
+      <!-- unordered list -->
+      <h2>Technology</h2>
+
+      <!-- circle, disc, none -->
+      <ul style="list-style-type: square">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+      </ul>
+
+      <!-- ordred list -->
+      <!-- type: 'A' type='I' type='i' type='a'-->
+      <ol type="1" start="4">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+      </ol>
+
+      <ol type="a" start="4" reversed>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+      </ol>
+
+      <!-- Nesting of list -->
+      <h3 style="color: rgb(47, 47, 161)">Lists</h3>
+      <ul>
+        <li>We group related data into list on web browser.</li>
+        <li>
+          There are three types of list:
+          <!-- upper-alpha, lower-alpha, lower-roman, lower-roman, decimal-->
+          <ol style="list-style-type: decimal-leading-zero">
+            <li>Unordered List</li>
+            <li>Ordered list</li>
+            <li>
+              Description list
+              <ul>
+                <li>Hello</li>
+              </ul>
+            </li>
+          </ol>
+        </li>
+      </ul>
+
+      <!-- Description list -->
+      <dl>
+        <!-- description term -->
+        <!-- description definition -->
+        <dt>HTML</dt>
+        <dd>is used to structure website.</dd>
+
+        <dt>CSS</dt>
+        <dd>is used to style website.</dd>
+      </dl>
+    </div>
+
+    <p>
+      Html, today we are
+      <span style="color: red; font-size: 30px; font-style: italic"
+        >learning</span
+      >
+      html
+    </p>
+
+    <!-- block element -> div, p, heading, list -->
+    <!-- inline elements-> span, b, i, input, label, textarea, abbr, sup, sub -->
+
+    <!-- Formatting elements -->
+    <del>20000</del>
+    <p title="2 to the power of 3">2<sup>3</sup></p>
+    <p>log <sub>10</sub></p>
+    <b>hello</b>
+    <strong>hello</strong>
+    <i>world</i>
+    <em>world</em>
+
+    <!-- Quotation elements -->
+    <address>
+      By alex, <br />
+      Street 200 <br />
+      admin@gmail.com <br />
+      USA
+    </address>
+
+    <q>Adding quotes</q>
+
+    <abbr title="Hyper text markup language">HTML</abbr>
+    <abbr title="World Health Organization">WHO</abbr>
+
+    <h3>Entity name & number</h3>
+    <p>&uarr; &#8593; &copy; &#169;</p>
+
+    <h5 style="font-size: 20px; color: red">20 &gt; 10</h5>
+  </body>
+</html>
