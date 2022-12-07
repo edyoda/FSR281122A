@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+
+    <!-- internal css -->
+    <style>
+      /* group selector */
+      table,
+      th,
+      td{
+        border: 1px solid orange;
+        border-collapse: collapse;
+      }
+
+      td {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Table
+        tr-> table row 
+      th-> table header
+    td-> table data/data cell-->
+    <!-- <h2>Technolgy Table</h2> -->
+
+    <table style="margin-left: auto; margin-right: auto; width: 50%">
+      <caption>
+        Technology Table
+      </caption>
+
+      <colgroup>
+        <col span="1" style="background-color: teal; width: 200px" />
+        <col span="1" style="background-color: yellow" />
+        <col span="1" style="background-color: teal; width: 200px" />
+      </colgroup>
+
+      <thead>
+        <tr>
+          <th>S.no</th>
+          <th>Tech Name</th>
+          <th>Year</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>HTML</td>
+          <td style="background-color: orange">1991</td>
+        </tr>
+
+        <tr style="background-color: pink">
+          <td>2</td>
+          <td>CSS</td>
+          <td>1993</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>JS</td>
+          <td>1995</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- colspan: it is used span the columns
+    rowspan: it is used to span the rows -->
+    <table>
+      <caption>
+        Food menu
+      </caption>
+
+      <thead>
+        <tr>
+          <th>S. NO.</th>
+          <th>Veg</th>
+          <th>Meat</th>
+          <th>Price</th>
+          <th>Beverages</th>
+          <th>Dessert</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td colspan="2">Briyani</td>
+          <!-- <td>Briyani</td> -->
+          <td>250</td>
+          <td>Cold Drink</td>
+          <td>Ice Cream</td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>Pizza</td>
+          <td>Chicken Tikka</td>
+          <td>400</td>
+          <td rowspan="2">Juice</td>
+          <td>Pastries</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>Dosa</td>
+          <td>Chicken Burger</td>
+          <td>200</td>
+          <!-- <td>Juice</td> -->
+          <td>Caramel Custard</td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td>Uttapam</td>
+          <td>Fish and Chips</td>
+          <td>250</td>
+          <td>Shake</td>
+          <td>Brownie</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+
+<!-- task
+create a table for employee data(sno, name , age, salary, designation , profile image) and add image as well, style it -->
