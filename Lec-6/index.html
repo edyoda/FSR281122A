@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+
+    <!-- internal css -->
+    <style>
+      input[type="text"],
+      textarea {
+        width: 50%;
+        border: none;
+        border-bottom: 2px solid teal;
+      }
+
+      label {
+        color: teal;
+        font-size: 17px;
+      }
+
+      input[type="reset"],
+      button {
+        background-color: teal;
+        border: none;
+        color: white;
+        padding: 8px 5px;
+        cursor: pointer;
+      }
+
+      form {
+        margin-left: auto;
+        margin-right: auto;
+        width: 700px;
+        background-color: aliceblue;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header></header>
+
+    <main>
+      <section>
+        <form
+          method="get"
+          action="./submission.html"
+          target="_self"
+          autocomplete="on"
+        >
+          <p>
+            <label for="fname">Enter First Name</label>
+            <input
+              type="text"
+              name="fname"
+              placeholder="Please enter name"
+              value="Hi"
+              readonly
+            />
+          </p>
+
+          <p>
+            <label for="lname">Enter Last Name</label>
+            <input
+              type="text"
+              name="lname"
+              placeholder="Please enter name"
+              value=""
+              required
+            />
+          </p>
+          <p>
+            <label for="age"> Enter age*</label>
+            <input
+              type="number"
+              name="age"
+              placeholder="Please enter age"
+              value=""
+              disabled
+            />
+          </p>
+
+          <p>
+            <label for="contact"> Contact Number</label>
+            <input
+              type="tel"
+              name="contact"
+              placeholder="Please enter contact"
+              value=""
+              autofocus
+              pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
+            />
+          </p>
+
+          <p>
+            <!-- radio button -->
+
+            <input type="radio" name="gender" value="male" />
+            <label for="male">Male</label>
+
+            <input type="radio" name="gender" value="female" />
+            <label for="female">Female</label>
+
+            <!-- select time & date -->
+            <label for="birthday">Birthday</label>
+            <input type="date" name="birthday" />
+
+            <label for="time">Time</label>
+            <input type="time" name="time" />
+          </p>
+
+          <p>
+            <!-- select from range -->
+            <label for="exp">Select your experience</label>
+            <input type="number" name="exp" min="1" max="10" />
+
+            <label for="price">Select Price</label>
+            <input type="range" name="price" min="1" max="100" />
+          </p>
+          <p>
+            <!-- selecting files -->
+            <label for="files">Browse Files</label>
+            <input type="file" name="files" multiple />
+
+            <input type="checkbox" name="term" />
+            <label for="term">I agree to <a href="#">T&C</a></label>
+          </p>
+          <p>
+            <textarea
+              rows="6"
+              cols="20"
+              placeholder="Describe about yourself..."
+            ></textarea>
+          </p>
+
+          <p>
+            <!-- dropdown -->
+            <label for="country">Select Country</label>
+            <select name="country">
+              <optgroup label="country">
+                <option value="canada">Canada</option>
+                <option value="india">India</option>
+                <option value="australia">Australia</option>
+              </optgroup>
+
+              <optgroup label="country">
+                <option value="canada">Canada</option>
+                <option value="india">India</option>
+                <option value="australia">Australia</option>
+              </optgroup>
+            </select>
+          </p>
+
+          <p>
+            <!-- editable dropwdown -->
+            <input type="text" name="tech" list="tech" />
+            <datalist id="tech">
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="js">JS</option>
+            </datalist>
+          </p>
+
+          <p>
+            <button>Submit</button>
+
+            <input type="reset" />
+          </p>
+        </form>
+
+        <form>
+          <fieldset>
+            <legend>Login in</legend>
+            <label for="email">Enter email</label>
+            <input type="email" name="email" />
+
+            <label for="pwd">Enter password</label>
+            <input type="password" name="pwd" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Contact Us</legend>
+            <p>
+              <label for="fname">Enter First Name</label>
+              <input
+                type="text"
+                name="fname"
+                placeholder="Please enter name"
+                value="Hi"
+                readonly
+              />
+            </p>
+
+            <p>
+              <label for="lname">Enter Last Name</label>
+              <input
+                type="text"
+                name="lname"
+                placeholder="Please enter name"
+                value=""
+                required
+              />
+            </p>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
+
+<!-- task
+2 forms and style
+signup: name, age, dob,gender, agree, email, pwd, hobbies, email & pwd 
+
+contact us: decide-->
