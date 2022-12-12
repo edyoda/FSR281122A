@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media</title>
+
+    <style>
+      /* pseudo elements */
+      audio::-webkit-media-controls-panel {
+        background-color: aquamarine;
+      }
+
+      audio::-webkit-media-controls-play-button {
+        background-color: bisque;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <audio controls autoplay muted>
+      <source src="./audio/file_example_MP3_700KB.mp3" type="audio/mp3" />
+      <source src="./audio/file_example_OOG_1MG.ogg" type="audio/ogg" />
+      <source src="./audio/file_example_WAV_1MG.wav" type="audio/wav" />
+
+      <!-- Fallback content -->
+      <!-- Your browser doesnot support audio element. -->
+      <embed
+        src="./audio/file_example_MP3_700KB.mp3"
+        height="100px"
+        width="50px"
+        type="audio/mp3"
+      />
+    </audio>
+
+    <video style="height: 200px; width: 200px" controls autoplay muted loop>
+      <source src="./video/SampleVideo.mp4" type="video/mp4" />
+      <source src="./video/addoggformat.ogg" type="video/ogg" />
+      <source src="./video/addoggformat.webm" type="video/webm" />
+
+      <track
+        src="./caption_vtt/intro.vtt"
+        kind="subtitles"
+        srclang="en"
+        label="English"
+      />
+
+      <track
+        src="./caption_vtt/intro.vtt"
+        kind="subtitles"
+        srclang="hi"
+        label="hindi"
+      />
+
+      <!-- Fallback content -->
+      <!-- Your browser doesnot support video element. -->
+      <embed
+        src="./video/SampleVideo.mp4"
+        height="200px"
+        width="200px"
+        type="video/mp4"
+      />
+    </video>
+
+    <img src="./download.png" alt="download" />
+
+    <iframe
+      height="400px"
+      width="400px"
+      src="https://file-examples.com/index.php/sample-video-files/sample-ogg-files-download/
+    "
+    ></iframe>
+
+    <!-- youtube -->
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/pe1w1N4v8zA"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>
+
+<!-- 
+task
+include video with captions -->
