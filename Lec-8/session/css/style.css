@@ -81,3 +81,14 @@ p {
   /* best option */
   overflow: auto;
 }
+
+#style-button {
+  background-color: rgb(229, 61, 89);
+
+  border: none;
+  /* border-top: 2px dotted black; */
+
+  color: white;
+  font-size: 16px;
+  padding: 4px 6px;
+}
