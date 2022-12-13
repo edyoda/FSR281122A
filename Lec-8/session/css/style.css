@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: teal;
+}
+
+#style-background {
+  background-color: green;
+  height: 300px;
+
+  border: 1px solid black;
+
+  background-image: url("../images/download.png");
+  background-repeat: no-repeat;
+
+  /* width height */
+  /* background-size: 100px 200px; */
+
+  /* background-size: cover; */
+
+  /* background-position: center; */
+
+  background-attachment: fixed;
+
+  /* property shorthand */
+  background: green url("../images/download.png") no-repeat center;
+}
+
+.column-left {
+  width: 39%;
+}
+
+.column-right {
+  width: 9%;
+}
+
+.col {
+  float: left;
+  border: 1px solid black;
+  margin: 5px;
+  height: 100px;
+}
+
+/* display */
+#style-inline {
+  display: inline;
+}
+
+#style-display {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+}
+
+#style-prop {
+  display: block;
+}
+
+/* overflow */
+#style-overflow {
+  border: 1px solid black;
+  height: 100px;
+  width: 100px;
+
+  overflow: hidden;
+
+  overflow: scroll;
+
+  overflow-y: scroll;
+
+  overflow-x: scroll;
+
+  /* best option */
+  overflow: auto;
+}
