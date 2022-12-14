@@ -119,7 +119,7 @@ ul > li {
   width: 100px;
   height: 100px;
 
-  box-shadow: 4px 4px teal;
+  /* box-shadow: 4px 4px teal; */
 
   /* to add blur effect */
   box-shadow: 4px 4px 4px teal;
