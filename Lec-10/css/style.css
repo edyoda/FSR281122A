@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+#grad {
+  height: 200px;
+
+  background-color: red;
+
+  /* by default top to bottom */
+  background-image: linear-gradient(teal, yellow, red);
+  background-image: -webkit-linear-gradient(teal, yellow, red);
+  background-image: -moz-linear-gradient(teal, yellow, red);
+  background-image: -o-linear-gradient(teal, yellow, red);
+
+  /* left to right */
+  background-image: linear-gradient(to right, teal, yellow, red);
+
+  /* diagonal */
+  /* background-image: linear-gradient(to bottom left, teal, yellow, red); */
+
+  /* degree */
+  /* background-image: linear-gradient(45deg, teal, yellow, red); */
+
+  background-image: linear-gradient(to right, teal 20%, yellow 40%, red 60%);
+
+  /* repeating linear gradient */
+  background-image: repeating-linear-gradient(
+    to right,
+    teal 20%,
+    yellow 40%,
+    red 60%
+  );
+}
+
+#radial {
+  height: 200px;
+  background-color: yellow;
+
+  background-image: radial-gradient(teal, red, blue);
+  background-image: -webkit-radial-gradient(teal, red, blue);
+  background-image: -moz-radial-gradient(teal, red, blue);
+  background-image: -o-radial-gradient(teal, red, blue);
+
+  background-image: radial-gradient(teal 10%, red 30%, blue 50%);
+
+  /* repeating radial gradient */
+  background-image: repeating-radial-gradient(teal 10%, red 30%, blue 50%);
+}
+
+#multi-border {
+  width: 150px;
+  height: 150px;
+  border: 7px solid transparent;
+  padding: 10px;
+  border-image: url("../images/download.png");
+
+  /* border-image: -webkit-linear-gradient(
+    to right,
+    teal 25%,
+    yellow 25%,
+    red 50%,
+    red 50%,
+    pink 75%,
+    pink 75%
+  ); */
+}
+
+#style-text {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 200px;
+  border: 1px solid black;
+
+  /* text-overflow: clip; */
+  text-overflow: ellipsis;
+}
+
+.col {
+  width: 25%;
+  border: 1px solid black;
+  float: left;
+  height: 200px;
+}
+
+#row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* flex */
+.container {
+  height: 400px;
+  background-color: aquamarine;
+  display: flex;
+
+  /* column, row-reverse */
+  flex-direction: row;
+
+  /* flex-start, flex-end, center, space-evenly, space-around */
+  justify-content: space-between;
+
+  /* flex-start, flex-end, center */
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+
+  align-content: space-between;
+}
+
+.container div {
+  border: 1px solid black;
+  width: 30%;
+  height: 100px;
+}
+
+.flex-container {
+  height: 200px;
+  background-color: orange;
+  display: flex;
+}
+
+.flex-container div {
+  border: 1px solid black;
+  width: 30%;
+  height: 100px;
+}
