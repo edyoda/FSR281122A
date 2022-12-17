@@ -129,10 +129,15 @@
 
 #hover-effect {
   background-color: pink;
+  height: 100px;
+  width: 100px;
 }
 
 #hover-effect:hover {
   background-color: red;
   color: white;
   background-image: url("../images/download.png");
+  height: 110px;
+  width: 110px;
+  font-size: 20px;
 }
