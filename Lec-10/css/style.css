@@ -131,6 +131,8 @@
   background-color: pink;
   height: 100px;
   width: 100px;
+  position: relative;
+  z-index: -1;
 }
 
 #hover-effect:hover {
@@ -140,4 +142,5 @@
   height: 110px;
   width: 110px;
   font-size: 20px;
+
 }
