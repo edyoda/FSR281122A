@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+.div-media {
+  background-color: red;
+}
+
+.style-p {
+  font-size: 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+
+  /* maximum width allowed for this image */
+  max-width: 100px;
+}
+
+.z-style {
+  position: relative;
+  top: 10px;
+  background-color: pink;
+  height: 100px;
+}
+
+.z-style > div {
+  position: absolute;
+  top: 10px;
+  background-color: yellow;
+  height: 100px;
+  z-index: -1;
+}
+
+/* min till 400px : mobiles  */
+@media screen and (max-width: 400px) {
+  .div-media {
+    background-color: yellow;
+  }
+
+  .style-p {
+    font-size: 14px;
+  }
+}
+
+/* 600px and above: tables & large phones */
+@media screen and (min-width: 600px) and (min-height: 200px) {
+  .div-media {
+    background-color: pink;
+  }
+}
+
+/* 768px and above: big tablets */
+@media screen and (min-width: 768px) {
+  .div-media {
+    background-color: blue;
+  }
+
+  .style-p {
+    font-size: 16px;
+  }
+}
+
+/* 992px and above: laptops */
+@media screen and (min-width: 992px) {
+  .div-media {
+    background-color: orange;
+  }
+}
+
+/* 1200px and above */
+@media screen and (min-width: 1200px) {
+  .div-media {
+    background-color: teal;
+  }
+
+  .style-p {
+    font-size: 18px;
+  }
+}

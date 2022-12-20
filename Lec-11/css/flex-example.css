@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.flex-container > div {
+  background-color: teal;
+  border: 1px solid black;
+  width: 24%;
+  height: 100px;
+}
+
+@media screen and (max-width: 800px) {
+  .flex-container > div {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
