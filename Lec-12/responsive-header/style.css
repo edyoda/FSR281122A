@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: pink;
+}
+
+a {
+    color: black;
+}
+
+/* header */
+.header {
+    background-color: white;
+    box-shadow: 1px 1px 4px rgb(210, 207, 207);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    /* border-right: 1px solid rgb(202, 199, 199); */
+    text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: #dad5d5;
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+/* hamburger center line */
+.header .menu-icon .navicon {
+    /* background-color: black; */
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background 0.4s;
+    width: 18px
+}
+
+
+/* hamburger above and below lines */
+.header .menu-icon .navicon::before,
+.header .menu-icon .navicon::after {
+    content: '';
+    background-color: black;
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transition: all 0.2s ease-out;
+}
+
+.header .menu-icon .navicon::before {
+    top: 5px
+}
+
+
+.header .menu-icon .navicon::after {
+    top: -5px
+}
+
+/* menu button */
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon .navicon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/* 768px and above */
+@media (min-width: 800px) {
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+}

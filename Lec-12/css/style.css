@@ -1,0 +1,187 @@
+#style-div {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  background-color: palevioletred;
+}
+
+#animated-div {
+  height: 100px;
+  border: 1px solid black;
+  background-color: teal;
+
+  /* standard property */
+  animation-name: animate;
+  -webkit-animation-name: animate;
+  -moz-animation-name: animate;
+
+  animation-duration: 4s;
+  -webkit-animation-duration: animate;
+  -moz-animation-duration: animate;
+
+  /* start after 2 seconds */
+  animation-delay: 2s;
+
+  /* 3 */
+  animation-iteration-count: infinite;
+
+  /* reverse */
+  animation-direction: alternate-reverse;
+
+  /* ease-in ease-out linear */
+  animation-timing-function: ease-in;
+
+  /* name duration timing-function iteration-count direction */
+  animation: animate 4s linear 2s infinite alternate;
+  -webkit-animation: animate 4s linear 2s infinite alternate;
+  -moz-webkit-animation: animate 4s linear 2s infinite alternate;
+}
+
+@keyframes animate {
+  0% {
+    background-color: pink;
+    height: 100px;
+  }
+
+  25% {
+    background-color: yellow;
+  }
+
+  50% {
+    background-color: yellowgreen;
+    height: 100px;
+  }
+
+  75% {
+    background-color: aquamarine;
+    height: 100px;
+  }
+
+  100% {
+    background-color: orange;
+    /* height: 200px; */
+  }
+}
+
+.bounce {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgb(190, 62, 83);
+  margin-top: 10px;
+
+  /* animation-name: bounce; */
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+/* @keyframes bounce {
+  from {
+    transform: translate(300px, 300px);
+    -webkit-transform: translate(300px, 300px);
+    -moz-transform: translate(300px, 300px);
+    -ms-transform: translate(300px, 300px);
+  }
+
+  to {
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+  }
+} */
+
+/* alternate */
+@keyframes bounce {
+  from {
+    margin-top: 300px;
+  }
+
+  to {
+    margin-top: 0px;
+  }
+}
+
+/* alterante: with position relative */
+/* @keyframes bounce {
+    from {
+      top: 300px;
+    }
+  
+    to {
+      top: 0px;
+    }
+  } */
+
+/* pseudo class & elements  */
+
+/* 
+syntax
+selector:psudo class {
+
+} */
+
+/* anchor tag */
+/* used to style unvisited link */
+a:link {
+  color: palegoldenrod;
+  text-decoration: none;
+}
+
+a:visited {
+  color: teal;
+}
+
+a:hover {
+  color: navajowhite;
+}
+
+a:active {
+  color: orange;
+}
+
+img:hover {
+  opacity: 0.6;
+}
+
+p b:first-child {
+  color: yellow;
+}
+
+/* study */
+/* :focus, :disabled, :checked */
+
+input:disabled {
+  border: 1px solid black;
+}
+
+/* 
+syntax
+selector::psudo elements {
+
+} */
+
+p::first-line {
+  color: blue;
+}
+
+h1::first-letter {
+  font-size: 50px;
+  color: red;
+}
+
+h1::before {
+  content: url("../images/download.png");
+}
+
+h1::after {
+  content: url("../images/download.png");
+}
+
+ul li::marker {
+  color: red;
+}
+
+/* study */
+/* ::placeholder, ::scrollbar */
