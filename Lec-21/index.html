@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body onload="alert('Welcome to my website')">
+    <form>
+      <label for="name">Enter Name</label>
+      <input type="text" name="name" id="name" value="" />
+      <button type="button" onclick="getName()">Submit</button>
+    </form>
+
+    <p onmouseover="mouseEvent()" id="hi">Hi</p>
+
+    <form method="post" onsubmit="alert('form is submitted')">
+      <input id="input-one" onkeydown="keyDown()" placeholder="keydown" />
+      <input id="input-two" onblur="blurEvent()" placeholder="blur" />
+      <input id="input-three" onkeyup="keyUp()" placeholder="keyup" />
+      <input id="input-four" onchange="handleChange()" placeholder="change" />
+      <input id="input-five">
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="display"></p>
+
+
+    <button id="click-button">Click</button>
+
+    <a href="https://www.amazon.com" id="amazon">amazon</a>
+
+    <!-- external js -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
