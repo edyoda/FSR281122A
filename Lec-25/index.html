@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ajax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <button onclick="getData()">Get Data</button>
+    <button onclick="sendData()">Send Data</button>
+
+    <div id="loading" style="display: none">
+      <img
+        src="https://cdn.nirmaltv.com/images/generatorphp-thumb.gif"
+        alt="loader"
+      />
+    </div>
+
+    <div id="posted"></div>
+
+    <form>
+      <input type="text" id="name" />
+    </form>
+
+    <button onclick="getName()">Submit</button>
+
+    <!-- external js -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
+
+<!-- task 
+create a get request
+create a post request and send the json data and display in UI data posted succssfully (pop-up / modal).
+Implement error handling
+
+
+error handling
+take input from user (firstName, department (cse, ece), age) apply error handling
+
+-->
