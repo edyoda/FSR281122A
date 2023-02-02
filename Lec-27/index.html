@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jquery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <button id="getdata">Get</button>
+    <button id="postdata">Post</button>
+    <button id="common">Common</button>
+
+    <form>
+      <label for="email">Please enter name</label>
+      <input type="email" placeholder="Please enter email" id="email" />
+      <p id="name-error" style="color: red;"></p>
+
+      <label for="contact">Please enter contact</label>
+      <input type="tel" placeholder="Please enter contact" id="contact" />
+      <p id="contact-error" style="color: red;"></p>
+
+
+      <button onclick="onSubmit()" type="button">Submit</button>
+    </form>
+
+    <!-- external js -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
+
+<!-- task (https://jsonplaceholder.typicode.com/users)
+get the api data and display data in the form of cards in UI
+
+look for post request api
+take input from user and post data in DB through http request 
+
+//create signup for:  name, age, email, password, hobbies, DOB  -->
